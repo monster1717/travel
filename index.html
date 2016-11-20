@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<title>个人日志</title>
+		
+		<!-- 检测浏览器是否支持css3与html5 -->
+		<script type="text/javascript" src="./JavaScript/modernizr.custom.js"></script>
+
+		<script type="text/javascript" src="./JavaScript/jquery-1.7.2.min.js"></script>
+		<!-- slider样式和锚点的样式 -->
+		<script type="text/javascript" src="./JavaScript/slider.js"></script>
+		<!-- 图片背景遮罩样式 -->
+		<script type="text/javascript" src="./JavaScript/lightBox.js"></script>
+		<!-- 边框的动画样式 -->
+		<script type="text/javascript" src="./JavaScript/border.js"></script>
+		<script type="text/JavaScript" src="./JavaScript/nav.js"></script>
+		<link href="./style/style.css" rel="stylesheet">
+		<link href="./style/normalize.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="head">
+			<div class="header">
+				<div class="background">
+					<div class="nav">
+						<img class="icon" src="images/icon/logo.png" style="opacity:0;filter:alpha(opacity=0);">
+						<div class="column" id="column">
+							<ul>
+								<li><a><i class="iconfont">&#xf00cc</i></a></li>
+								<li><a>Brief</a></li>
+								<li><a>Book</a></li>
+								<li><a>视频</a></li>
+								<li><a>相册</a></li>
+								<li><a>News</a></li>
+							</ul>
+						</div>
+						<div class="search">
+							<input type="text" id="search" value="search">
+							<a class="search_logo"><i class="iconfont">&#xf012c</i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider link" id="slider">
+				<div class="main" id="template_main">
+					<div class="main_i  {{css}}" id="main_{{index}}">
+						<div class="caption">
+							<h2>{{h2}}</h2>
+							<h1>{{h1}}</h1>	
+							<p>{{p}}</p>
+							<a href="#">GET IN TOUCH</a>
+						</div>
+						<img class="picture" src="./images/{{index}}.png" >
+					</div>
+				</div>
+				<div class="ctrl" id="template_ctrl" >
+					<a class="ctrl_i " id="ctrl_{{index}}" href="javascript:switchSlider({{index}})">
+						<img src="./images/{{index}}.png" >
+					</a>
+				</div>
+			</div>
+			<div class="button">
+				<div id="prev"><a href="#"><</a></div>
+				<div id="next"><a href="#">></a></div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="project link" id="project">
+				<div class="title">
+					<p>FEATURED PROJECT</p>
+				</div>
+				<div class="text">
+					<p>In Sanya, the emergence of a number of tourist attractions to create and break the world record association of world records and won many of the world's. Sanya won the title of "2012 China charm city".</p>
+				</div>
+				<div class="projectPhoto">
+					<div class="projectItem" id="projectPhoto_1">
+						<div class="imgList">
+							<a href="#">
+								<h2>Swimming</h2>
+								<h4>屏东</h4>
+								<p>lalala</p>
+							</a>
+						</div>
+					</div>
+					<div class="projectItem" id="projectPhoto_1">
+						<div class="imgList">
+							<a href="#">								
+								<h2>Photography</h2>
+								<h4>最南点</h4>
+								<p>lalala</p>
+							</a>
+						</div>
+					</div>
+					<div class="projectItem" id="projectPhoto_1">
+						<div class="imgList">
+							<a href="#">								
+								<h2>Mountaineering</h2>
+								<h4>马路</h4>
+								<p>lalala</p>
+							</a>
+						</div>
+					</div>
+					<div class="projectItem" id="projectPhoto_1">
+						<div class="imgList">
+							<a href="#">
+								<h2>Sandy beach</h2>
+								<h4>海边</h4>
+								<p>lalala</p>
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="more"><a href="#"><p>more</p></a></div>
+			</div>
+			<div class="service link" id="service">
+				<div class="title">
+					<p>SERVICE PROVIDED</p>
+				</div>
+				<div class="text">
+					<p>Welcome to the Nanshan tourism, here we will provide the best service to you in the travel conditions the basic necessities of life.</p>
+				</div>
+				<div class="serviceItem">
+					<ul>
+						<li class="list">						
+							<div class="border border_1"></div>
+							<div class="border border_2"></div>
+							<div class="border border_3"></div>
+							<div class="border border_4"></div>
+							<div class="listBlock">	
+								<a href="#">
+									<p><i class="iconfont">&#xf0096</i></p>
+									<p class="titl"><strong>Nanshan food</strong></p><p class="infor">"Nanshan vegetarian"collection of the essence of the temple vegetarian as one.</p>
+								</a>
+							</div>
+						</li>
+						<li class="list">						
+							<div class="border border_1"></div>
+							<div class="border border_2"></div>
+							<div class="border border_3"></div>
+							<div class="border border_4"></div>
+							<div class="listBlock">	
+								<a href="#">
+									<p><i class="iconfont">&#xf02a4</i></p>
+									<p class="titl"><strong>Nanshan food</strong></p><p class="infor"> Nanshan leisure hall is set accommodation, catering, conference, recreation is large Turisthotellet one of the reception system.</p>
+								</a>
+							</div>
+						</li>
+						<li class="list">													
+							<div class="border border_1"></div>
+							<div class="border border_2"></div>
+							<div class="border border_3"></div>
+							<div class="border border_4"></div>
+							<div class="listBlock">
+								<a href="#">
+									<p><i class="iconfont">&#xf0294</i></p>
+									<p class="titl"><strong>Nanshan food</strong></p><p class="infor">Nanshan line is smooth is the best choice for driving.</p>
+								</a>
+							</div>
+						</li>
+						<li class="list">							
+							<div class="border border_1"></div>
+							<div class="border border_2"></div>
+							<div class="border border_3"></div>
+							<div class="border border_4"></div>
+							<div class="listBlock">
+								<a href="#">
+									<p><i class="iconfont">&#xf0202</i></p>
+									<p class="titl"><strong>Nanshan food</strong></p><p class="infor">Nanshan Cultural Tourism Zone tickets 150 yuan / person, tourists admission, one vote, other ticketsto see a pricelist.</p>
+								</a>
+							</div>
+						</li>
+						<li class="list">						
+							<div class="border border_1"></div>
+							<div class="border border_2"></div>
+							<div class="border border_3"></div>
+							<div class="border border_4"></div>
+							<div class="listBlock">
+								<a href="#">
+									<p><i class="iconfont">&#xf01f0</i></p>
+									<p class="titl"><strong>Nanshan food</strong></p><p class="infor">We also provide tour guideservices, medical services, etc..</p>
+								</a>
+							</div>
+						</li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<div class="vedio link" id="vedio">
+				<!--<video src="./video/About inspiration.mp4" width="100%" height="579px" controls preload="auto" loop></video>-->
+				<embed height="579" width="100%" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="http://static.hdslb.com/miniloader.swf" flashvars="aid=5424056&page=1" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></embed>
+			</div>
+			<div class="scenic link" id="scenic">
+				<div class="title">
+					<p><a href="../pageDown/pageDown.html" target="_blank">我的相册</a></p>
+				</div>
+				<div class="imgShow">
+					<div class="top">
+						<!-- <ul>
+							<li>
+								<a href="#">
+									<img src="./images/driver.png" />
+									<p class="scenicTitle"><strong>The only proper course to take</strong></p>
+									<p class="scenicIntro">Is the only proper course to take Nanshan is a door of landscape, architectural style imitation of the northern and Southern Dynasties archway. Visitors enter the door, they entered the auspiciousquiet of the Nanshan Buddhist holy land.</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="./images/market.png" />
+									<p class="scenicTitle"><strong>Nanshan Temple</strong></p>
+									<p class="scenicIntro">Nanshan Temple is located in Sanya Nanshan Cultural Tourism Zone is a large imitation of Tang Dynasty style, the mountain sea temple.</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="./images/food.png" />
+									<p class="scenicTitle"><strong>Thirty-three Guanyin Hall</strong></p>
+									<p class="scenicIntro">The thirty-three main hall of a Buddism godness Guanyin worship Guanyin Bodhisattva thirty-three kinds of images, the first human body should be property dragon five ye.</p>
+								</a>
+							</li>
+						</ul>-->	
+						<figure class="scenic_zoe">
+							<img src="./images/driver.png" />
+							<figcaption>
+								<h3>The only pro<span>per<span></h3>
+								<p class="icon-links">
+									<a href="#"><i class="icon-heart iconfont">&#xf0145</i></a>
+									<a href="#"><i class="icon-eye iconfont">&#xf0198</i></a>
+									<a href="#"><i class="icon-share iconfont">&#xf012f</i></a>
+								</p>
+								<p class="description">Nanshan Temple is located in Sanya Nanshan Cultural Tourism Zone is a large imitation of Tang Dynasty style, the mountain sea temple.</p>
+							</figcaption>
+						</figure>
+						<figure class="scenic_zoe">
+							<img src="./images/market.png" />
+							<figcaption>
+								<h3>Nanshan Tem<span>ple</span></h3>
+								<p class="icon-links">
+									<a href="#"><i class="icon-heart iconfont">&#xf0145</i></a>
+									<a href="#"><i class="icon-eye iconfont">&#xf0198</i></a>
+									<a href="#"><i class="icon-share iconfont">&#xf012f</i></a>
+								</p>
+								<p class="description">Is the only proper course to take Nanshan is a door of landscape, architectural style imitation of the northern and Southern Dynasties archway. Visitors enter the door, they entered the auspiciousquiet of the Nanshan Buddhist holy land.</p>
+							</figcaption>
+						</figure>				
+						<figure class="scenic_zoe">
+							<img src="./images/food.png" />
+							<figcaption>
+								<h3>Thirty-three Guan<span>yin</span></h3>
+								<p class="icon-links">
+									<a href="#"><i class="icon-heart iconfont">&#xf0145</i></a>
+									<a href="#"><i class="icon-eye iconfont">&#xf0198</i></a>
+									<a href="#"><i class="icon-share iconfont">&#xf012f</i></a>
+								</p>
+								<p class="description">The thirty-three main hall of a Buddism godness Guanyin worship Guanyin Bodhisattva thirty-three kinds of images, the first human body should be property dragon five ye.</p>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="clear"></div>
+					<div class="bottom">
+						<!-- <ul>
+							<li>
+								<a href="#">
+									<img src="./images/seasun.png" />
+									<p class="scenicTitle"><strong>Jade a Buddism godness Guanyin Pavilion</strong></p>
+									<p class="scenicIntro">Gold and jade Guanyin Pavilion dedicated to the world-famous Golden Jade Guanyin, the statue of Guanyin statue inlaid Sakyamuni relic by Chinese traditional palace of gold filigree crafts manufacturing.</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="./images/seasail.png" />
+									<p class="scenicTitle"><strong>Sea Guanyin</strong></p>
+									<p class="scenicIntro">Nanshan Guanyin icon of the sea 108 meters high, 1993, China's Reli gious Affairs Bureau of the State Council and the people's Government of Hainan Province formally approved by the Jing plastic.</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="./images/sail.png" />
+									<p class="scenicTitle"><strong>The secret law to Yokado</strong></p>
+									<p class="scenicIntro">Kukai memorial garden located in Nanshan Guanyin 108 meters on the square in front of, covers an area of 7000 square meters, is China's first display of Buddhist ten cases of one "Shingon" East dense buildings, Mandala, musical instruments and sadhana cultural platform.</p>
+								</a>
+							</li>
+						</ul> -->
+						<figure class="scenic_zoe">
+							<img src="./images/mountain.png" />
+							<figcaption>
+								<h3>Jade a Budd<span>ism</span></h3>
+								<p class="icon-links">
+									<a href="#"><i class="icon-heart iconfont">&#xf0145</i></a>
+									<a href="#"><i class="icon-eye iconfont">&#xf0198</i></a>
+									<a href="#"><i class="icon-share iconfont">&#xf012f</i></a>
+								</p>
+								<p class="description">Gold and jade Guanyin Pavilion dedicated to the world-famous Golden Jade Guanyin, the statue of Guanyin statue inlaid Sakyamuni relic by Chinese traditional palace of gold filigree crafts manufacturing.</p>
+							</figcaption>
+						</figure>
+						<figure class="scenic_zoe">
+							<img src="./images/seasail.png" />
+							<figcaption>
+								<h3>Sea Guan<span>yin</span></h3>
+								<p class="icon-links">
+									<a href="#"><i class="icon-heart iconfont">&#xf0145</i></a>
+									<a href="#"><i class="icon-eye iconfont">&#xf0198</i></a>
+									<a href="#"><i class="icon-share iconfont">&#xf012f</i></a>
+								</p>
+								<p class="description">Nanshan Guanyin icon of the sea 108 meters high, 1993, China's Reli gious Affairs Bureau of the State Council and the people's Government of Hainan Province formally approved by the Jing plastic.</p>
+							</figcaption>
+						</figure>				
+						<figure class="scenic_zoe">
+							<img src="./images/sail.png" />
+							<figcaption>
+								<h3>The secret <span>law</span></h3>
+								<p class="icon-links">
+									<a href="#"><i class="icon-heart iconfont">&#xf0145</i></a>
+									<a href="#"><i class="icon-eye iconfont">&#xf0198</i></a>
+									<a href="#"><i class="icon-share iconfont">&#xf012f</i></a>
+								</p>
+								<p class="description">Kukai memorial garden located in Nanshan Guanyin 108 meters on the square in front of, covers an area of 7000 square meters, is China's first display of Buddhist ten cases of one "Shingon" East dense buildings, Mandala, musical instruments and sadhana cultural platform.</p>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="contact link" id="contact">
+				<div class="title">
+					<p>CONTACT</p>
+				</div>
+				<div class="text">
+					<p>We will open a number of dedicated lines, dedicated to provide you with convenient travel, any relevant issues can call the advisory.</p>
+				</div>
+				<div class="contactText">
+					<div class="contactLeft">
+						<p class="tip"><strong>give me a call</strong></p>
+						<ul>
+							<li><i class="iconfont"></i><p>Sanya City, Hainan Province, Nanshan Cultural Tourism Zone</p></li>
+							<li><i class="iconfont"></i><p>http://www.nanshan.com</p></li>
+							<li><i class="iconfont"></i><p>0898-88837888</p></li>
+							<li><i class="iconfont"></i><p>nsale@qq.com</p></li>
+							<li><i class="iconfont"></i><p>572025</p></li>
+						</ul>
+						<div class="share">
+							<p>I want to <strong>Share</strong> to...</p>
+						</div>
+						<ul>
+							<li><a href="#"><i class="iconfont"></i></a></li>
+							<li><a href="#"><i class="iconfont"></i></a></li>
+							<li><a href="#"><i class="iconfont"></i></a></li>
+						</ul>
+					</div>
+					<div class="contactRight">
+						<p class="tip"><strong>GIVE ME A MESSAGE</strong></p>
+						<input type="text" class="name" placeholder="Your Name">
+						<input class="e-mail" type="" placeholder="Your E-mail">
+						<input class="message" type="text" placeholder="Your Message">
+						<div class="button-1"><a href="#">Send</a></div>
+						<div class="button-2"><a href="#">Revoke</a></div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="info">
+			</div>
+		</div>
+	</body>
+</html>
