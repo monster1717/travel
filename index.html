@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<title>travelDiary</title>
+		
+		<!-- 检测浏览器是否支持css3与html5 -->
+		<script type="text/javascript" src="./JavaScript/modernizr.custom.js"></script>
+
+		<script type="text/javascript" src="./JavaScript/jquery-1.7.2.min.js"></script>
+		<!-- slider样式和锚点的样式 -->
+		<script type="text/javascript" src="./JavaScript/slider.js"></script>
+		<!-- 图片背景遮罩样式 -->
+		<script type="text/javascript" src="./JavaScript/lightBox.js"></script>
+		<!-- 边框的动画样式 -->
+		<script type="text/javascript" src="./JavaScript/border.js"></script>
+		<script type="text/JavaScript" src="./JavaScript/nav.js"></script>
+		<link href="./style/style.css" rel="stylesheet">
+		<link href="./style/normalize.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="head">
+			<div class="header">
+				<div class="background">
+					<div class="nav">
+						<img class="icon" src="images/icon/logo.png" style="opacity:0;filter:alpha(opacity=0);">
+						<div class="column" id="column">
+							<ul>
+								<li><a><i class="iconfont">&#xf00cc</i></a></li>
+								<li><a>相册</a></li>
+								<li><a>攻略</a></li>
+								<li><a>视频</a></li>
+								<li><a>博客</a></li>
+								<li><a>联系我</a></li>
+							</ul>
+						</div>
+						<div class="search">
+							<input type="text" id="search" value="search">
+							<a class="search_logo"><i class="iconfont">&#xf012c</i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider link" id="slider">
+				<div class="main" id="template_main">
+					<div class="main_i  {{css}}" id="main_{{index}}">
+						<div class="caption">
+							<h2>{{h2}}</h2>
+							<h1>{{h1}}</h1>	
+							<p>{{p}}</p>
+							<a href="#">开启旅程</a>
+						</div>
+						<img class="picture" src="./images/{{index}}.png" >
+					</div>
+				</div>
+				<div class="ctrl" id="template_ctrl" >
+					<a class="ctrl_i " id="ctrl_{{index}}" href="javascript:switchSlider({{index}})">
+						<img src="./images/{{index}}.png" >
+					</a>
+				</div>
+			</div>
+			<div class="button">
+				<div id="prev"><a href="#"><</a></div>
+				<div id="next"><a href="#">></a></div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="project link" id="project">
+				<div class="title">
+					<p><a href="pageDown/pageDown.html">相册</a></p>
+				</div>
+				<div class="text">
+					<p>在三亚，每一个地方都像一幅画，等待着我们去发现、探索和记录。</p>
+				</div>
+				<div class="projectPhoto">
+					<div class="projectItem" id="projectPhoto_1">
+						<div class="imgList">
+							<a href="#">
+								<h2>Swimming</h2>
+								<h4>屏东</h4>
+								<p>lalala</p>
+							</a>
+						</div>
+					</div>
+					<div class="projectItem" id="projectPhoto_1">
+						<div class="imgList">
+							<a href="#">								
+								<h2>Photography</h2>
+								<h4>最南点</h4>
+								<p>lalala</p>
+							</a>
+						</div>
+					</div>
+					<div class="projectItem" id="projectPhoto_1">
+						<div class="imgList">
+							<a href="#">								
+								<h2>Mountaineering</h2>
+								<h4>马路</h4>
+								<p>lalala</p>
+							</a>
+						</div>
+					</div>
+					<div class="projectItem" id="projectPhoto_1">
+						<div class="imgList">
+							<a href="#">
+								<h2>Sandy beach</h2>
+								<h4>海边</h4>
+								<p>  美食是海边的一大亮点~</p>
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="more"><a href="pageDown/pageDown.html"><p>more</p></a></div>
+			</div>
+			<div class="service link" id="service">
+				<div class="title">
+					<p>旅行攻略</p>
+				</div>
+				<div class="text">
+					<p>我为这次的三亚之行整理出了一份详细攻略，包括了衣食住行和旅行中的很多细节，分享给大家~</p>
+				</div>
+				<div class="serviceItem">
+					<ul>
+						<li class="list">						
+							<div class="border border_1"></div>
+							<div class="border border_2"></div>
+							<div class="border border_3"></div>
+							<div class="border border_4"></div>
+							<div class="listBlock">	
+								<a href="#">
+									<p><i class="iconfont">&#xf0096</i></p>
+									<p class="titl"><strong>注意事项</strong></p><p class="infor">在旅行中为大家整理了一些需要注意的事项，希望可以帮到大家~</p>
+								</a>
+							</div>
+						</li>
+						<li class="list">						
+							<div class="border border_1"></div>
+							<div class="border border_2"></div>
+							<div class="border border_3"></div>
+							<div class="border border_4"></div>
+							<div class="listBlock">	
+								<a href="#">
+									<p><i class="iconfont">&#xf02a4</i></p>
+									<p class="titl"><strong>当地习俗</strong></p><p class="infor"> 每到一个地方都应该了解当地的风俗习惯，要知道哪些事能做哪些事不能做，不然要惹麻烦噢。</p>
+								</a>
+							</div>
+						</li>
+						<li class="list">													
+							<div class="border border_1"></div>
+							<div class="border border_2"></div>
+							<div class="border border_3"></div>
+							<div class="border border_4"></div>
+							<div class="listBlock">
+								<a href="#">
+									<p><i class="iconfont">&#xf0294</i></p>
+									<p class="titl"><strong>当地特产</strong></p><p class="infor">给大家推荐一些当地的特产，和防坑指南。</p>
+								</a>
+							</div>
+						</li>
+						<li class="list">							
+							<div class="border border_1"></div>
+							<div class="border border_2"></div>
+							<div class="border border_3"></div>
+							<div class="border border_4"></div>
+							<div class="listBlock">
+								<a href="#">
+									<p><i class="iconfont">&#xf0202</i></p>
+									<p class="titl"><strong>交通工具</strong></p><p class="infor">根据自己的情况选择最适合、最实惠的交通工具。</p>
+								</a>
+							</div>
+						</li>
+						<li class="list">						
+							<div class="border border_1"></div>
+							<div class="border border_2"></div>
+							<div class="border border_3"></div>
+							<div class="border border_4"></div>
+							<div class="listBlock">
+								<a href="#">
+									<p><i class="iconfont">&#xf01f0</i></p>
+									<p class="titl"><strong>当地交通</strong></p><p class="infor">每个地方的交通情况都不同，提前了解才能轻松出行。</p>
+								</a>
+							</div>
+						</li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<div class="vedio link" id="vedio">
+				<!--<video src="./video/About inspiration.mp4" width="100%" height="579px" controls preload="auto" loop></video>-->
+				<embed height="579" width="100%" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="http://static.hdslb.com/miniloader.swf" flashvars="aid=5424056&page=1" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></embed>
+			</div>
+			<div class="scenic link" id="scenic">
+				<div class="title">
+					<p><a href="blog/index.html" target="_blank">我的博客</a></p>
+				</div>
+				<div class="imgShow">
+					<div class="top">
+						<!-- <ul>
+							<li>
+								<a href="#">
+									<img src="./images/driver.png" />
+									<p class="scenicTitle"><strong>The only proper course to take</strong></p>
+									<p class="scenicIntro">Is the only proper course to take Nanshan is a door of landscape, architectural style imitation of the northern and Southern Dynasties archway. Visitors enter the door, they entered the auspiciousquiet of the Nanshan Buddhist holy land.</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="./images/market.png" />
+									<p class="scenicTitle"><strong>Nanshan Temple</strong></p>
+									<p class="scenicIntro">Nanshan Temple is located in Sanya Nanshan Cultural Tourism Zone is a large imitation of Tang Dynasty style, the mountain sea temple.</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="./images/food.png" />
+									<p class="scenicTitle"><strong>Thirty-three Guanyin Hall</strong></p>
+									<p class="scenicIntro">The thirty-three main hall of a Buddism godness Guanyin worship Guanyin Bodhisattva thirty-three kinds of images, the first human body should be property dragon five ye.</p>
+								</a>
+							</li>
+						</ul>-->	
+						<figure class="scenic_zoe">
+							<img src="./images/driver.png" />
+							<figcaption>
+								<h3>我在<span>三亚</span>的第一天</h3>
+								<p class="icon-links">
+									<a href="#"><i class="icon-heart iconfont">&#xf0145</i></a>
+									<a href="#"><i class="icon-eye iconfont">&#xf0198</i></a>
+									<a href="#"><i class="icon-share iconfont">&#xf012f</i></a>
+								</p>
+								<p class="description">我在三亚的第一天，这篇游记与大家分享~</p>
+							</figcaption>
+						</figure>
+						<figure class="scenic_zoe">
+							<img src="./images/market.png" />
+							<figcaption>
+								<h3>我在<span>三亚</span>的第二天</h3>
+								<p class="icon-links">
+									<a href="#"><i class="icon-heart iconfont">&#xf0145</i></a>
+									<a href="#"><i class="icon-eye iconfont">&#xf0198</i></a>
+									<a href="#"><i class="icon-share iconfont">&#xf012f</i></a>
+								</p>
+								<p class="description">我在三亚的第二天，去了海边，吃到了当地的特色美食，体验了海边悠闲的生活，很开心~</p>
+							</figcaption>
+						</figure>				
+						<figure class="scenic_zoe">
+							<img src="./images/food.png" />
+							<figcaption>
+								<h3>我在<span>三亚</span>的第三天</h3>
+								<p class="icon-links">
+									<a href="#"><i class="icon-heart iconfont">&#xf0145</i></a>
+									<a href="#"><i class="icon-eye iconfont">&#xf0198</i></a>
+									<a href="#"><i class="icon-share iconfont">&#xf012f</i></a>
+								</p>
+								<p class="description">我在三亚的第一天，这篇游记与大家分享~今天我们去了海边，天气很好；中午我们吃到了当地的特色美食，很好吃！下午体验了海边悠闲的生活，晚上运气特别好，遇到了传统的篝火晚会，有美食和美酒，很开心~</p>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="clear"></div>
+					<div class="bottom">
+						<!-- <ul>
+							<li>
+								<a href="#">
+									<img src="./images/seasun.png" />
+									<p class="scenicTitle"><strong>Jade a Buddism godness Guanyin Pavilion</strong></p>
+									<p class="scenicIntro">Gold and jade Guanyin Pavilion dedicated to the world-famous Golden Jade Guanyin, the statue of Guanyin statue inlaid Sakyamuni relic by Chinese traditional palace of gold filigree crafts manufacturing.</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="./images/seasail.png" />
+									<p class="scenicTitle"><strong>Sea Guanyin</strong></p>
+									<p class="scenicIntro">Nanshan Guanyin icon of the sea 108 meters high, 1993, China's Reli gious Affairs Bureau of the State Council and the people's Government of Hainan Province formally approved by the Jing plastic.</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="./images/sail.png" />
+									<p class="scenicTitle"><strong>The secret law to Yokado</strong></p>
+									<p class="scenicIntro">Kukai memorial garden located in Nanshan Guanyin 108 meters on the square in front of, covers an area of 7000 square meters, is China's first display of Buddhist ten cases of one "Shingon" East dense buildings, Mandala, musical instruments and sadhana cultural platform.</p>
+								</a>
+							</li>
+						</ul> -->
+						<figure class="scenic_zoe">
+							<img src="./images/mountain.png" />
+							<figcaption>
+								<h3>我在<span>三亚</span>的第四天</h3>
+								<p class="icon-links">
+									<a href="#"><i class="icon-heart iconfont">&#xf0145</i></a>
+									<a href="#"><i class="icon-eye iconfont">&#xf0198</i></a>
+									<a href="#"><i class="icon-share iconfont">&#xf012f</i></a>
+								</p>
+								<p class="description">我在三亚的第一天，这篇游记与大家分享~今天我们去了海边，天气很好；中午我们吃到了当地的特色美食，很好吃！下午体验了海边悠闲的生活，晚上运气特别好，遇到了传统的篝火晚会，有美食和美酒，很开心~</p>
+							</figcaption>
+						</figure>
+						<figure class="scenic_zoe">
+							<img src="./images/seasail.png" />
+							<figcaption>
+								<h3>我在<span>三亚</span>的第五天</h3>
+								<p class="icon-links">
+									<a href="#"><i class="icon-heart iconfont">&#xf0145</i></a>
+									<a href="#"><i class="icon-eye iconfont">&#xf0198</i></a>
+									<a href="#"><i class="icon-share iconfont">&#xf012f</i></a>
+								</p>
+								<p class="description">我在三亚的第一天，这篇游记与大家分享~今天我们去了海边，天气很好；中午我们吃到了当地的特色美食，很好吃！下午体验了海边悠闲的生活，晚上运气特别好，遇到了传统的篝火晚会，有美食和美酒，很开心~</p>
+							</figcaption>
+						</figure>				
+						<figure class="scenic_zoe">
+							<img src="./images/sail.png" />
+							<figcaption>
+								<h3>我在<span>三亚</span>的第六天</h3>
+								<p class="icon-links">
+									<a href="#"><i class="icon-heart iconfont">&#xf0145</i></a>
+									<a href="#"><i class="icon-eye iconfont">&#xf0198</i></a>
+									<a href="#"><i class="icon-share iconfont">&#xf012f</i></a>
+								</p>
+								<p class="description">我在三亚的第一天，这篇游记与大家分享~今天我们去了海边，天气很好；中午我们吃到了当地的特色美食，很好吃！下午体验了海边悠闲的生活，晚上运气特别好，遇到了传统的篝火晚会，有美食和美酒，很开心~</p>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="contact link" id="contact">
+				<div class="title">
+					<p>和我联系</p>
+				</div>
+				<div class="text">
+					<p>欢迎所有想要和我交流，或是有任何问题的朋友们联系我，期待大家的消息。</p>
+				</div>
+				<div class="contactText">
+					<div class="contactLeft">
+						<p class="tip"><strong>联系方式</strong></p>
+						<ul>
+							<li><i class="iconfont"></i><p>重庆市南岸区重庆邮电大学</p></li>
+							<li><i class="iconfont"></i><p>http://www.zhuqianying.com</p></li>
+							<li><i class="iconfont"></i><p>10086</p></li>
+							<li><i class="iconfont"></i><p>806222636@qq.com</p></li>
+							<li><i class="iconfont"></i><p>400065</p></li>
+						</ul>
+						<div class="share">
+							<p>I want to <strong>Share</strong> to...</p>
+						</div>
+						<ul>
+							<li><a href="#"><i class="iconfont"></i></a></li>
+							<li><a href="#"><i class="iconfont"></i></a></li>
+							<li><a href="#"><i class="iconfont"></i></a></li>
+						</ul>
+					</div>
+					<div class="contactRight">
+						<p class="tip"><strong>给我发送消息</strong></p>
+						<input type="text" class="name" placeholder="姓名">
+						<input class="e-mail" type="" placeholder="邮箱">
+						<input class="message" type="text" placeholder="信息">
+						<div class="button-1"><a href="#">发送</a></div>
+						<div class="button-2"><a href="#">撤销</a></div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="info">
+			</div>
+		</div>
+	</body>
+</html>
