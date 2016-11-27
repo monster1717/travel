@@ -1,0 +1,279 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	font-family: "Microsoft Yahei";
+	font-size: 15px;
+
+}
+img{
+	width: 100%;
+	border: 0;
+}
+a,li{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+.main{
+	width: 100%;
+	position: relative;
+}
+#aboutMe{
+	color:#ffffff;
+	overflow: hidden;
+	position: absolute;
+	width: 33%;
+	z-index: 99;
+	float: left;
+}
+#myBlog{
+	float: right;
+	width: 67%;
+}
+#contentBox{
+	width: 33%;
+	position: fixed;
+	margin: 0 auto;
+	background: url(../images/travelImg/back_4.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+.box{
+	width: 100%;
+	background-color: rgba(0,0,0,0.3);
+}
+#leftContent{
+	padding-top: 58px;
+	width: 84.2956%;
+	margin: 0 auto;
+}
+#leftContent h1{
+	text-align: center;
+}
+.photoMe{
+	margin: 0 auto;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	background-image: url(../images/myphoto.jpg);
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+
+.connectMe{
+	height: 25px;
+	padding-left: 64px;
+	padding-right: 64px;
+}
+.connectMe li{
+	display: inline-block;
+	margin-left: 17.8771px;
+}
+.connectMe li:first-child{
+	margin-left: 0;
+}
+.connectME li:last-child{
+	margin-right: 0;
+}
+.iconfont{
+	width: 25px;
+}
+.iconfont img{
+	width: 100%;
+	width: 25px;
+}
+.intro p{
+	text-align: center;
+	margin-top: 25px;
+}
+.message{
+	margin-top: 35px;
+}
+.messList{
+	
+}
+.messList li{
+	position: relative;
+	overflow:hidden; 
+	
+	white-space: nowrap;
+	margin-bottom: 15px;
+
+}
+.messList .iconfont{
+	width: 8.9674%;
+}
+.messInfor{
+	position: absolute;
+	top: 0;
+	left: 11.428%;
+	width: 88.5870%;
+}
+.messName,.messContent{
+	color: #ffffff;
+}
+.messContent{
+	width: 100%;
+	font-size: 10px;
+	word-wrap: normal;
+}
+.button{
+	float: left;
+	height: 30px;
+	width: 29.1553%;
+	border: 1px solid #a1a2a6; 
+	border-radius: 8px;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+	margin-left: 40px;
+	margin-right: 20px;
+}
+.more{
+	width: 14px;
+	height: 14px;
+}
+.write{
+	width: 14px;
+	height: 14px;
+}
+.clear{
+	clear: both;
+}
+.travel{
+	margin-top: 40px;
+	width: 100%;
+	padding-top: 40px;
+	padding-bottom: 40px; 
+	background-color: rgba(0,0,0,0.5);
+}
+.travel img{
+	width: 16.6667%;
+	float: left;
+}
+.clear{
+	clear: both;
+}
+.right{
+	padding-top: 20px;
+	width: 100%;
+	padding-bottom: 20px;
+	text-align: center;
+}
+.blogList{
+	width: 91.3043%;
+	margin: 0 auto;
+}
+.blogList a{
+	color: #000000;
+}
+.showBlock{
+	width: 100%;
+	position: relative;
+	margin-top: 60px;
+}
+.summary{
+	width: 63.1918%;
+	position: relative;
+}
+.exampleImg{
+	width: 29.9871%;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.overview{
+	white-space: 4px;
+}
+.detail{
+	margin-top: 15px;
+}
+.detail span{
+	color: #939496;
+	font-size: 0.8em;
+	margin-left: 5px;
+}
+#myBlog{
+	padding-bottom: 60px;
+	background-color: #eee;
+}
+.messDetail{
+	width: 91.3043%;
+	margin:  auto;
+	padding-top: 60px;
+	margin-bottom: 60px; 
+}
+.messDetail>h1,.messDetail>p {
+	text-align: center;
+}
+.messDetail>p{
+	font-size: 1.5em;
+}
+.messboard,.perdetail{
+	position: relative;
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 25px;
+	margin-top: 25px;
+}
+.perPhoto{
+	width: 80px;
+	height: 80px;
+}
+.perPhoto img{
+	width: 100%;
+}
+.pername{
+	position: absolute;
+	top: 40px;
+	left: 125px;
+	width: 50%;
+	height: 50px;
+	border: 0px;
+	padding-left: 15px;
+}
+.writePanel{
+	width: 100%;
+	border: 0px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+
+}
+.emailURL,.weiboURL{
+	width: 30%;
+	height: 40px;
+	border-radius: 5px;
+	border: 1px solid #aaa;
+	padding-left: 5px;
+}
+.save{
+	width: 10%;
+	border-radius: 5px;
+	height: 40px;
+	border: 1px solid #aaa;
+	background-color: #fff;
+}
+.messTip{
+	margin-top: 15px;
+}
+.messname{
+	position: absolute;
+	top: 50px;
+	left: 125px;
+	font-size: 1.5em;
+	font-weight: 500;
+}
+.permess{
+	margin-top: 15px;
+}
+.delete{
+	width: 20px;
+	height: 30px;
+	position: absolute;
+	top: 20px;
+
+	right: 25px;
+}
