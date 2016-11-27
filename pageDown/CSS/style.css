@@ -1,0 +1,41 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body{
+	width: 100%;
+	overflow: hidden;
+}
+a,img{
+	border: 0;
+}
+img{
+	width: 100%;
+}
+#content{
+	position: relative;
+	width: 100%;
+	visibility: hidden;/*visiblity为隐藏式，元素仍然占据这原有的位置，display为hidden时，元素不占位置*/
+	margin: 0 auto;
+}
+.page{
+	position: absolute;
+	overflow: hidden;
+	/*border-left: #ffffff 1px solid;*/
+	width: 50%;
+	height: 100%;
+	cursor: pointer;
+}
+.right{
+	border-left: #ffffff 1px solid;
+	left: 50%;
+}
+.img{
+	width: 200%;
+	position: absolute;
+	height: 100%;
+}
+#imgShow{
+	display: none;
+}
